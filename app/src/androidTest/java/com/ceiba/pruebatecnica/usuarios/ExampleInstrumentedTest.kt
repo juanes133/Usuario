@@ -1,4 +1,4 @@
-package com.ceiba.pruebatecnica.usuario
+package com.ceiba.pruebatecnica.usuarios
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
