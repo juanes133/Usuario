@@ -14,11 +14,13 @@ import com.ceiba.pruebatecnica.usuarios.viewmodel.UsersViewModel
 import com.ceiba.pruebatecnica.usuarios.viewmodel.UsersViewModelFactory
 
 class UsersFragment : Fragment() {
-
+/*
     private lateinit var binding: FragmentUsersBinding
     private val usersViewModel: UsersViewModel by viewModels {
         UsersViewModelFactory(
-            (activity?.application as UsersApplication).usersRepository)
+            (activity?.application as UsersApplication).usersRepository,
+            (activity?.application as UsersApplication).postsUsersRepository,
+        )
     }
 
     override fun onCreateView(
@@ -37,4 +39,6 @@ class UsersFragment : Fragment() {
         binding.recyclerUser.layoutManager = LinearLayoutManager(context)
         binding.recyclerUser.adapter = UsersAdapter(list, {})
     }
+
+ */
 }

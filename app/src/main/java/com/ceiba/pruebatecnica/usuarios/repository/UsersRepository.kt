@@ -1,19 +1,10 @@
 package com.ceiba.pruebatecnica.usuarios.repository
 
-import com.ceiba.pruebatecnica.usuarios.service.UsersService
-import com.ceiba.pruebatecnica.usuarios.database.UsersDao
-import com.ceiba.pruebatecnica.usuarios.database.UsersEntity
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
+import com.ceiba.pruebatecnica.usuarios.database.daos.UsersDao
+import com.ceiba.pruebatecnica.usuarios.database.entities.UsersEntity
+import com.ceiba.pruebatecnica.usuarios.repository.base.BaseRepository
 
-class UsersRepository(private val usersDao: UsersDao) {
-
-    private val retrofit = Retrofit.Builder()
-        .baseUrl("https://jsonplaceholder.typicode.com/")
-        .addConverterFactory(GsonConverterFactory.create())
-        .build()
-
-    private val service: UsersService = retrofit.create(UsersService::class.java)
+class UsersRepository(private val usersDao: UsersDao) : BaseRepository() {
 
     suspend fun getUsers(
         onSuccess: (ArrayList<UsersEntity>) -> Unit,
@@ -34,5 +25,17 @@ class UsersRepository(private val usersDao: UsersDao) {
         } catch (e: Exception) {
             onFailure(e)
         }
+    }
+
+    suspend fun getUsersCache(): ArrayList<UsersEntity> {
+        return usersDao.getAll() as ArrayList<UsersEntity>
+    }
+
+    suspend fun insertUsersCache(list: ArrayList<UsersEntity>) {
+        usersDao.insertAll(list)
+    }
+
+    suspend fun deleteAll() {
+        usersDao.deleteAll()
     }
 }

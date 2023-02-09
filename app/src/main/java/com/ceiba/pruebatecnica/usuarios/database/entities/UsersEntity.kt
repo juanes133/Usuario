@@ -1,4 +1,4 @@
-package com.ceiba.pruebatecnica.usuarios.database
+package com.ceiba.pruebatecnica.usuarios.database.entities
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
