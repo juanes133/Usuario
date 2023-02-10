@@ -7,18 +7,23 @@
 
     <fragment
         android:id="@+id/userFragment"
-        android:name="com.ceiba.pruebatecnica.usuarios.view.UsersFragment"
+        android:name="com.ceiba.pruebatecnica.usuarios.view.users.UsersFragment"
         android:label="Prueba de ingreso"
-        tools:layout="@layout/fragment_users" >
+        tools:layout="@layout/fragment_users">
         <action
             android:id="@+id/action_userFragment_to_postsFragment"
             app:destination="@id/postsFragment" />
     </fragment>
     <fragment
         android:id="@+id/postsFragment"
-        android:name="com.ceiba.pruebatecnica.usuarios.view.PostsFragment"
-        android:label="fragment_posts"
-        tools:layout="@layout/fragment_posts" >
-        <argument android:name="idposts" />
+        android:name="com.ceiba.pruebatecnica.usuarios.view.userposts.UserPostsFragment"
+        android:label="Prueba de ingreso"
+        tools:layout="@layout/fragment_user_posts">
+        <argument
+            android:name="iduser"
+            app:argType="integer" />
+        <argument android:name="name" />
+        <argument android:name="phone" />
+        <argument android:name="email" />
     </fragment>
 </navigation>

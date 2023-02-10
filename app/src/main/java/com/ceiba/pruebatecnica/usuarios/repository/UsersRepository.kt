@@ -18,7 +18,8 @@ class UsersRepository(private val usersDao: UsersDao) : BaseRepository() {
                         it.id,
                         it.name,
                         it.phone,
-                        it.email)
+                        it.email
+                    )
                 )
             }
             onSuccess(result)

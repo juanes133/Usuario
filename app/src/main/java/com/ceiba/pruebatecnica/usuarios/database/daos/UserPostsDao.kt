@@ -7,7 +7,7 @@ import androidx.room.Query
 import com.ceiba.pruebatecnica.usuarios.database.entities.UsersPostsEntity
 
 @Dao
-interface PostsUsersDao {
+interface UserPostsDao {
 
     @Query("SELECT * FROM posts_users_table")
     suspend fun getAll(): List<UsersPostsEntity>

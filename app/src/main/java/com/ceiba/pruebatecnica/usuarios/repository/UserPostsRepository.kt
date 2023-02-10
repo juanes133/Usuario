@@ -1,10 +1,10 @@
 package com.ceiba.pruebatecnica.usuarios.repository
 
-import com.ceiba.pruebatecnica.usuarios.database.daos.PostsUsersDao
+import com.ceiba.pruebatecnica.usuarios.database.daos.UserPostsDao
 import com.ceiba.pruebatecnica.usuarios.database.entities.UsersPostsEntity
 import com.ceiba.pruebatecnica.usuarios.repository.base.BaseRepository
 
-class PostsUsersRepository(private val postsUsersDao: PostsUsersDao) : BaseRepository() {
+class UserPostsRepository(private val postsUsersDao: UserPostsDao) : BaseRepository() {
 
     suspend fun getUserPosts(
         id: Int,
@@ -19,7 +19,8 @@ class PostsUsersRepository(private val postsUsersDao: PostsUsersDao) : BaseRepos
                         it.userId,
                         it.id,
                         it.title,
-                        it.body)
+                        it.body
+                    )
                 )
             }
             onSuccess(result)

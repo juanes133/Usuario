@@ -1,4 +1,4 @@
-package com.ceiba.pruebatecnica.usuarios.view
+package com.ceiba.pruebatecnica.usuarios.view.users
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

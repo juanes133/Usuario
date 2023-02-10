@@ -1,4 +1,4 @@
-package com.ceiba.pruebatecnica.usuarios.view
+package com.ceiba.pruebatecnica.usuarios.view.users
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
@@ -20,5 +20,4 @@ class UsersViewHolder(view: View) : RecyclerView.ViewHolder(view) {
             onClickListener(userModel)
         }
     }
-
 }

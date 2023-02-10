@@ -4,7 +4,7 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.ceiba.pruebatecnica.usuarios.database.daos.PostsUsersDao
+import com.ceiba.pruebatecnica.usuarios.database.daos.UserPostsDao
 import com.ceiba.pruebatecnica.usuarios.database.daos.UsersDao
 import com.ceiba.pruebatecnica.usuarios.database.entities.UsersPostsEntity
 import com.ceiba.pruebatecnica.usuarios.database.entities.UsersEntity
@@ -13,7 +13,7 @@ import com.ceiba.pruebatecnica.usuarios.database.entities.UsersEntity
 abstract class UsersDb : RoomDatabase() {
 
     abstract fun usersDao(): UsersDao
-    abstract fun postsUsersDao():PostsUsersDao
+    abstract fun postsUsersDao(): UserPostsDao
 
     companion object {
         @Volatile

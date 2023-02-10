@@ -4,4 +4,6 @@
     <string name="loading">loading</string>
     <string name="a_ocurrido_un_error">¡A ocurrido un error!</string>
     <string name="reintentar">Reintentar</string>
+    <string name="buscar_usuario">Buscar usuario</string>
+    <string name="list_empty">List is empty</string>
 </resources>

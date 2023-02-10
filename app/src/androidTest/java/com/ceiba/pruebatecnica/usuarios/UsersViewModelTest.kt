@@ -8,7 +8,7 @@ import com.ceiba.pruebatecnica.usuarios.database.entities.UsersPostsEntity
 import com.ceiba.pruebatecnica.usuarios.database.entities.UsersEntity
 import com.ceiba.pruebatecnica.usuarios.model.UserPostsModel
 import com.ceiba.pruebatecnica.usuarios.model.UserModel
-import com.ceiba.pruebatecnica.usuarios.repository.PostsUsersRepository
+import com.ceiba.pruebatecnica.usuarios.repository.UserPostsRepository
 import com.ceiba.pruebatecnica.usuarios.repository.UsersRepository
 import com.ceiba.pruebatecnica.usuarios.viewmodel.UsersViewModel
 import com.ceiba.pruebatecnica.usuarios.viewmodel.UsersViewModelFactory
@@ -34,7 +34,7 @@ class UsersViewModelTest {
     init {
         //Given
         usersViewModel = UsersViewModelFactory(UsersRepository(roomDatabase.usersDao()),
-            PostsUsersRepository(roomDatabase.postsUsersDao())).create(UsersViewModel::class.java)
+            UserPostsRepository(roomDatabase.postsUsersDao())).create(UsersViewModel::class.java)
     }
 
     @Before

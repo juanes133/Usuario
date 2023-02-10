@@ -5,13 +5,13 @@ import com.ceiba.pruebatecnica.usuarios.database.entities.UsersPostsEntity
 import com.ceiba.pruebatecnica.usuarios.database.entities.UsersEntity
 import com.ceiba.pruebatecnica.usuarios.model.UserPostsModel
 import com.ceiba.pruebatecnica.usuarios.model.UserModel
-import com.ceiba.pruebatecnica.usuarios.repository.PostsUsersRepository
+import com.ceiba.pruebatecnica.usuarios.repository.UserPostsRepository
 import com.ceiba.pruebatecnica.usuarios.repository.UsersRepository
 import kotlinx.coroutines.launch
 
 class UsersViewModel(
     private val usersRepository: UsersRepository,
-    private val postsUsersRepository: PostsUsersRepository,
+    private val postsUsersRepository: UserPostsRepository,
 ) : ViewModel() {
 
     private val mutableUsersList = MutableLiveData<ArrayList<UserModel>>()
@@ -124,14 +124,15 @@ class UsersViewModel(
 
     fun getUserPostsCache(id: Int) {
         viewModelScope.launch {
-            mutablePostsUsersList.value = toUserPostsModelList(postsUsersRepository.getUserPostsCache(id))
+            mutablePostsUsersList.value =
+                toUserPostsModelList(postsUsersRepository.getUserPostsCache(id))
         }
     }
 }
 
 class UsersViewModelFactory(
     private val usersRepository: UsersRepository,
-    private val postsUsersRepository: PostsUsersRepository,
+    private val postsUsersRepository: UserPostsRepository,
 ) :
     ViewModelProvider.Factory {
     override fun <T : ViewModel> create(modelClass: Class<T>): T {

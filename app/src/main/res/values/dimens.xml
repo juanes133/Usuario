@@ -8,4 +8,7 @@
     <dimen name="size_width_image_fallback">250dp</dimen>
     <dimen name="size_heigth_image_fallback">250dp</dimen>
     <dimen name="message_fallback_error">20sp</dimen>
+    <dimen name="text_body">16sp</dimen>
+    <dimen name="card_elevation">30dp</dimen>
+    <dimen name="card_radius">15dp</dimen>
 </resources>
