@@ -5,4 +5,7 @@
     <dimen name="margin_horizontal">5dp</dimen>
     <dimen name="text_number">16sp</dimen>
     <dimen name="text_name">18sp</dimen>
+    <dimen name="size_width_image_fallback">250dp</dimen>
+    <dimen name="size_heigth_image_fallback">250dp</dimen>
+    <dimen name="message_fallback_error">20sp</dimen>
 </resources>

@@ -3,18 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:padding="@dimen/padding_item">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/itemUser"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:elevation="20dp"
+        android:outlineAmbientShadowColor="@color/imagen_background"
+        android:outlineSpotShadowColor="@color/imagen_background"
         app:cardCornerRadius="15dp"
+        app:cardElevation="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        tools:targetApi="p">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -29,7 +32,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/margin_horizontal"
-                android:textColor="@color/black"
+                android:textColor="@color/green"
                 android:textSize="@dimen/text_name"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
@@ -44,7 +47,8 @@
                 android:layout_marginVertical="@dimen/margin_vertical"
                 android:src="@mipmap/ic_phone"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/name" />
+                app:layout_constraintTop_toBottomOf="@+id/name"
+                app:tint="@color/green" />
 
             <TextView
                 android:id="@+id/phone"
@@ -52,11 +56,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/margin_horizontal"
                 android:layout_marginVertical="@dimen/margin_vertical"
+                android:textColor="@color/black"
                 android:textSize="@dimen/text_number"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/iconPhone"
                 app:layout_constraintStart_toEndOf="@+id/iconPhone"
                 app:layout_constraintTop_toTopOf="@+id/iconPhone"
-                tools:text="1-8938-7636363" />
+                tools:text="1-770-736-8031 x56442" />
 
             <ImageView
                 android:id="@+id/iconEmail"
@@ -74,12 +80,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/margin_horizontal"
                 android:layout_marginVertical="@dimen/margin_vertical"
+                android:textColor="@color/black"
                 android:textSize="@dimen/text_number"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/iconEmail"
                 app:layout_constraintStart_toEndOf="@+id/iconEmail"
                 app:layout_constraintTop_toTopOf="@+id/iconEmail"
-                tools:text="jeme@gmai.com" />
+                tools:text="Sincere@april.biz" />
 
             <TextView
                 android:id="@+id/seePosts"
@@ -88,7 +95,7 @@
                 android:layout_marginHorizontal="@dimen/margin_horizontal"
                 android:layout_marginVertical="@dimen/margin_vertical"
                 android:text="@string/ver_publicaciones"
-                android:textColor="@color/black"
+                android:textColor="@color/green"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

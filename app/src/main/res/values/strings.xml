@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Usuario</string>
     <string name="ver_publicaciones">VER PUBLICACIONES</string>
+    <string name="loading">loading</string>
+    <string name="a_ocurrido_un_error">¡A ocurrido un error!</string>
+    <string name="reintentar">Reintentar</string>
 </resources>

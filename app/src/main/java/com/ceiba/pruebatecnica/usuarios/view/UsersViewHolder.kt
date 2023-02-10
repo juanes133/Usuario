@@ -16,7 +16,7 @@ class UsersViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         binding.name.text = userModel.name
         binding.phone.text = userModel.phone
         binding.email.text = userModel.email
-        itemView.setOnClickListener {
+        binding.seePosts.setOnClickListener {
             onClickListener(userModel)
         }
     }
